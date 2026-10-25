@@ -1,0 +1,684 @@
+<html>
+    <head>
+<link rel="stylesheet" href="ip_op.css">
+    </head>
+    <body>
+        <header>
+            <h1> Decision Control Structure </h1>
+            <h2> C Programming Solutions</h2>
+        </header>
+        
+        <table >
+            <tr><th colspan="3">  INDEX  </th></tr>
+            <tr>
+                <td>Sr No.</td>
+                <td>Program</td>
+                <td>Solutions</td>
+            </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Write a program to enter the number from the user and check it is positive or negative or 0 (zero) ?</td>
+                    <td><a href="#card1">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Enter a number from user and check it is odd or even ?</td>
+                    <td><a href="#card2">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Enter a number from the user and check that it is of 1 digit or 2 digit or 3 digit or 4 digit or 5 digit ?</td>
+                    <td><a href="#card3">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Enter a number from the user if the number is between 0 to 40 then we will print fail if the number is between 40 to 60 then we will print C grade ,if the number is between 60 to 80 than we will print B grade ,if the number is between 80 to 100 then we will print A grade and rest all number are invalid ?</td>
+                    <td><a href="#card4">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Enter a number from the user and check it is a decimal number or not ?</td>
+                    <td><a href="#card5">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Enter a number from the user if it is a negative then convert into positive and if it is positive then convert into negative often that print the number ?</td>
+                    <td><a href="#card6">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Enter a character from the user and check that it is an alphabet ?</td>
+                    <td><a href="#card7">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Enter a number from the user if the number is negative then square the number and if it is positive then increment the number 20 times ?</td>
+                    <td><a href="#card8">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Enter the number from the user it the number is negative or positive and find out of that number ?</td>
+                    <td><a href="#card9">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Enter two number from user and check which is the greater number and print the greater number ?</td>
+                    <td><a href="#card10">Solution</a></td>
+                </tr>  
+
+                <tr>
+                    <td>11</td>
+                    <td>Enter a number from user and check it is divisible by 4 or not ?</td>
+                    <td><a href="#card11">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Enter a four characters from users and check they are equal or not ?</td>
+                    <td><a href="#card12">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Enter three numbers from users and tell which is greater ?</td>
+                    <td><a href="#card13">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Enter a number from the user if the user enters 30 then print the month in which we have 30 days. If the enter 31 then print the month 31 days for 28, 29 print the month else everything is invalid ?</td>
+                    <td><a href="#card14">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Enter one digit number from user and print in words ?</td>
+                    <td><a href="#card15">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Enter two characters from user and check both are same or not, if not same then find out difference between them ?</td>
+                    <td><a href="#card16">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Enter two digit number from user and print it in word (like 50 will be five zero) ?</td>
+                    <td><a href="#card17">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Enter a character from user and it is in upper case, lower case, special characters or numbers ?</td>
+                    <td><a href="#card18">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Enter the year from user and check its leap year or not ?</td>
+                    <td><a href="#card19">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Enter date, month, year and check it is valid date or not ?</td>
+                    <td><a href="#card20">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Enter current date of DOB of user and find out difference ?</td>
+                    <td><a href="#card22">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Write a program to calculate area and perimeter of rectangle ?</td>
+                    <td><a href="#card23">Solution</a></td>
+                </tr>
+        </table>
+        
+
+           <div class="practicals">
+           
+            
+           
+                <div class = "Solutions" id="card1">
+                <h4>Write a program to enter the number from the user and check it is positive or negative or 0 (zero) ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int num1;
+
+clrscr();
+
+printf("Enter a number : ");
+scanf("%d",&num1);
+printf("\n");
+num1>0?printf("%d is positiven number.",num1):
+num1>0?printf("%d is negative number.",num1):
+printf("Its zero.");
+
+
+delay(3000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc1.PNG" alt="">
+            </div>
+            <div class = "Solutions"  id="card2">
+                <h4>Enter a number from user and check it is odd or even ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int num1;
+
+clrscr();
+
+printf("Enter a number : ");
+scanf("%d",&num1);
+printf("\n");
+!(num1%2)?printf("%d is an even number.",num1):
+printf("%d is an odd number.",num1);
+
+
+delay(3000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc2.PNG" alt="">
+            </div>
+            <div class = "Solutions"  id="card3">
+                <h4>Enter a number from the user and check that it is of 1 digit or 2 digit or 3 digit or 4 digit or 5 digit ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int num1;
+
+clrscr();
+
+printf("Enter a number : ");
+scanf("%ld",&num1);
+printf("\n");
+num1&gt;=0&&num1&lt;10?printf("%ld is a 1 digit number.",num1):
+num1&gt;=10&&num1&lt;100?printf("%ld is a 2 digit number.",num1):
+num1&gt;=100&&num1&lt;1000?printf("%ld is a 3 digit number.",num1):
+num1&gt;=1000&&num1&lt;10000?printf("%ld is a 4 digit number.",num1):
+num1&gt;=10000&&num1&lt;100000?printf("%d is a 5 digit number.",num1):printf("%ld is greater than 5 digit.",num1);
+									
+
+
+
+delay(3000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc3.PNG" alt="">
+            </div>
+            <div class = "Solutions" id="card4">
+                <h4>Enter a number from the user if the number is between 0 to 40 then we will print fail if the number is between 40 to 60 then we will print C grade ,if the number is between 60 to 80 than we will print B grade ,if the number is between 80 to 100 then we will print A grade and rest all number are invalid ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int marks;
+
+clrscr();
+
+printf("Enter marks : ");
+scanf("%d",&marks);
+printf("\n");
+
+
+if(marks&gt;=0 && marks&lt;40){
+
+	printf("Fail.");
+
+}
+else if(marks&gt;=40 && marks&lt;60){
+
+	printf("C Grade.");
+
+}
+else if(marks&gt;=60 && marks&lt;80){
+
+	printf("B Grade.");
+
+}
+else if(marks&gt;=80 && marks&lt;=100)
+{
+	printf("A Grade");
+
+}
+else{
+
+printf("Marks are invalid.");
+
+}
+
+delay(3000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc4.PNG" alt="">
+            </div>
+            <div class = "Solutions"  id="card5">
+                <h4>Enter a number from the user and check it is a decimal number or not ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+float num;
+int num1;
+
+clrscr();
+
+printf("Enter a number : ");
+scanf("%f",&num);
+printf("\n");
+
+num1 = num;
+
+if(num != num1){
+       printf("%f is a decimal number.",num);
+
+}else{
+	printf("%d is not a decimal number.",num1);
+
+}
+delay(3000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc5.PNG" alt="">
+            </div>
+            <div  class = "Solutions" id="card6">
+                <h4>Enter a number from the user if it is a negative then convert into positive and if it is positive then convert into negative often that print the number ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int num;
+
+clrscr();
+
+printf("Enter a number : ");
+scanf("%d",&num);
+printf("\n");
+
+if(num&gt;0)
+{
+num = -num;
+
+
+}else if(num&lt;0){
+
+num = +num;
+
+}
+printf("%d",num);
+
+delay(3000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc6.PNG" alt="blink could not be shown in image format">
+            </div>
+            <div  class = "Solutions" id="card7">
+                <h4>Enter a character from the user and check that it is an alphabet ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+char ch;
+
+clrscr();
+
+printf("Enter a character : ");
+scanf("%c",&ch);
+printf("\n");
+
+if((ch &gt;= 'A' && ch &lt;= 'Z') ||( ch &gt;= 'a' && ch &lt;= 'z')){
+
+	printf("%c is a character.",ch);
+
+}else{
+		printf("%c is not a character.",ch);
+
+}
+
+delay(3000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc7.PNG" alt="">
+            </div>
+            <div class = "Solutions" id="card8">
+                <h4>Enter a number from the user if the number is negative then square the number and if it is positive then increment the number 20 times ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int num,i;
+
+clrscr();
+
+printf("Enter a number : ");
+scanf("%d",&num);
+printf("\n");
+
+if(num&lt;0){
+printf("Square of the number is : \n");
+num = num*num;
+}
+else{
+printf("After increment 20 times : \n ");
+for(i=1;i&lt;=20;i++){
+
+num++;
+}
+
+}
+printf("%d",num);
+delay(3000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc8.PNG" alt="">
+            </div> 
+            <div class = "Solutions"  id="card9">
+                <h4>Enter the number from the user it the number is negative or positive and find out of that number ?</h4>
+                <p></p>
+                <img src="" alt="">
+            </div>
+            
+            <div  class = "Solutions" id="card10">
+                <h4>Enter two number from user and check which is the greater number and print the greater number ?	</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int num1,num2;
+
+clrscr();
+
+printf("Enter num1 : ");
+scanf("%d",&num1);
+printf("\n");
+printf("Enter num2 : ");
+scanf("%d",&num2);
+printf("\n");
+
+num1&gt;num2? printf("%d is greater than %d.",num1,num2):
+num2&gt;num1? printf("%d is greater than %d.",num2,num1):
+printf("Both are equal.");
+
+
+delay(3000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc10.PNG" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card11">
+                <h4>Enter a number from user and check it is divisible by 4 or not ?	</h4>
+                <p>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int num;
+
+clrscr();
+printf("Enter a number : ");
+scanf("%d",&num);
+
+if(!(num%4)){
+ printf("%d is divisible by 4.",num);
+
+}else{
+printf("%d is not divisible by 4",num);
+
+}
+
+delay(3000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc11.PNG" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card12">
+                <h4>Enter a four characters from users and check they are equal or not ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+char ch[4];
+int i;
+
+clrscr();
+for(i=0;i&lt;4;i++){
+
+printf("Enter  character %d: ",i+1);
+	     scanf(" %c",&ch[i]);
+}
+if(ch[0]==ch[1] && ch[1]==ch[2] && ch[2]==ch[3])
+{
+printf("All characters are equal.");
+}
+else{
+
+printf("All characters are not equal.");
+}
+
+delay(3000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc12.PNG" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card13">
+                <h4>Enter three numbers from users and tell which is greater ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int num[3];
+int i,large=0;
+
+clrscr();
+for(i=0;i&lt;3;i++){
+
+printf("Enter num%d: ",i+1);
+	     scanf("%d",&num[i]);
+}
+
+if(num[0]&gt;num[1] && num[0]&gt;num[2] && num[0]&gt;num[3])
+{
+large = num[0];
+}else if(num[1]&gt;num[0] && num[1]&gt;num[2] && num[1]&gt;num[3])
+{
+large = num[1];
+}else if(num[2]&gt;num[0] && num[2]&gt;num[1] && num[2]&gt;num[3])
+{
+large = num[2];
+
+}
+printf("%d is the largest.",large);
+delay(3000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc13.PNG" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card14">
+                <h4>Enter a number from the user if the user enters 30 then print the month in which we have 30 days. If the enter 31 then print the month 31 days for 28, 29 print the month else everything is invalid ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main() {
+    int days;
+    clrscr();
+    printf("Enter number of days (31, 30, 28/29): ");
+    scanf("%d", &days);
+
+    switch(days){
+    case 31 :
+	printf("Months with 31 days: January, March, May, July, August, October, December\n");
+	break;
+    case 30 :
+	printf("Months with 30 days: April, June, September, November\n");
+	break;
+    case 28:
+    case 29:
+
+	printf("Month with 28/29 days: February\n");
+
+     default: printf("Invalid input!\n");
+    }
+    delay(3000);
+}</p>
+                <img src="Programs/decision control structure/output/dsc14.PNG" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card15">
+                <h4>Enter one digit number from user and print in words ?	</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main() {
+    int num;
+    clrscr();
+    printf("Enter a single digit number (0-9): ");
+    scanf("%d", &num);
+    
+    switch(num) {
+        case 0: printf("Zero\n"); 
+	break;
+        case 1: printf("One\n"); 
+	break;
+        case 2: printf("Two\n"); 
+	break;
+        case 3: printf("Three\n"); 
+	break;
+        case 4: printf("Four\n"); 
+	break;
+        case 5: printf("Five\n"); 
+	break;
+        case 6: printf("Six\n"); 
+	break;
+        case 7: printf("Seven\n"); 
+	break;
+        case 8: printf("Eight\n"); 	
+	break;
+        case 9: printf("Nine\n"); 
+	break;
+        default: printf("Invalid single digit number!\n");
+    }
+    delay(3000);
+}</p>
+                <img src="Programs/decision control structure/output/dsc15.PNG" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card16">
+                <h4>Enter two characters from user and check both are same or not, if not same then find out difference between them ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main() {
+    char ch1, ch2;
+    clrscr();
+    printf("Enter first character: ");
+    scanf(" %c", &ch1);
+    printf("Enter second character: ");
+    scanf(" %c", &ch2);
+    
+    if(ch1 == ch2) {
+        printf("Both characters are same.\n");
+    } else {
+        printf("Both characters are not same. Difference : %d units.\n", ch1 - ch2);
+    }
+    delay(3000);
+}</p>
+                <img src="Programs/decision control structure/output/dsc16.PNG" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card17">
+                <h4>	Enter two digit number from user and print it in word (like 50 will be five zero) ?</h4>
+                <p></p>
+                <img src="" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card18">
+                <h4>Enter a character from user and it is in upper case, lower case, special characters or numbers ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main() {
+    char ch;
+    clrscr();
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+    
+    if(ch &gt;= 'A' && ch &lt;= 'Z')
+        printf("It is an Uppercase letter.\n");
+    else if(ch &gt;= 'a' && ch &lt;= 'z')
+        printf("It is a Lowercase letter.\n");
+    else if(ch &gt;= '0' && ch &lt;= '9')
+        printf("It is a Number.\n");
+    else
+        printf("It is a Special Character.\n");
+        
+    delay(3000);
+}</p>
+                <img src="Programs/decision control structure/output/dsc19.PNG" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card19">
+                <h4>Enter the year from user and check its leap year or not ?</h4>
+                <p></p>
+                <img src="" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card20">
+                <h4>Enter the year from user and check its leap year or not ?</h4>
+                <p></p>
+                <img src="" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card21">
+                <h4>Enter current date of DOB of user and find out difference ?	</h4>
+                <p></p>
+                <img src="" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card22">
+                <h4>Write a program to calculate area and perimeter of rectangle ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main() {
+    float l, w, area, perimeter;
+    clrscr();
+    printf("Enter length of rectangle: ");
+    scanf("%f", &l);
+    printf("Enter width of rectangle: ");
+    scanf("%f", &w);
+    
+    area = l * w;
+    perimeter = 2 * (l + w);
+    
+    printf("Area of rectangle = %.2f\n", area);
+    printf("Perimeter of rectangle = %.2f\n", perimeter);
+    
+    delay(3000);
+}</p>
+                <img src="Programs/decision control structure/output/dsc23.PNG" alt="Output larger to be filled">
+            </div>
+            
+
+        </div>    </body>
+    
+</html>

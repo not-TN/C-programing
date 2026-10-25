@@ -1,0 +1,365 @@
+<html>
+    <head>
+<link rel="stylesheet" href="ip_op.css">
+    </head>
+    <body>
+        <header>
+            <h1>Operators </h1>
+            <h2> C Programming Solutions</h2>
+        </header>
+        
+        <table >
+            <tr><th colspan="3">  INDEX  </th></tr>
+            <tr>
+                <td>Sr No.</td>
+                <td>Progarm</td>
+                <td>Solutions</td>
+            </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Write a program to show that example of pre-increment ?</td>
+                    <td><a href="#card1">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Write a program to show that example of post-increment ?</td>
+                    <td><a href="#card2">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Write a program to show that example of pre-decrement ?</td>
+                    <td><a href="#card3">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Write a program to show that example of post-decrement ?</td>
+                    <td><a href="#card4">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Write a program to enter 2 numbers from user add the number and show the answer , again take 2 number from user subtract the number display the answer ,again take 2 number from user multiply the number display the answer and ,again take 2 number from the user divide the number display the answer ,again take 2 number find the remainder and display the answer ?</td>
+                    <td><a href="#card5">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Write a program to enter a number from the user ,the length of the number is depend on the user ,programmer should print the last digit of number ?</td>
+                    <td><a href="#card6" onclick="">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Enter a decimal number from the user (float) and print the right hand side of the decimal point ?</td>
+                    <td><a href="#card7">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Enter a number from user and find out cube of numbers ?</td>
+                    <td><a href="#card8">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Enter float number from user and round of the number ?</td>
+                    <td><a href="#card9">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Enter a lower case character from user and print it into upper case ?</td>
+                    <td><a href="#card10">Solution</a></td>
+                </tr>  
+                <tr>
+                    <td>11</td>
+                    <td>Enter marks of students and calculate average of student’s marks ?</td>
+                    <td><a href="#card11">Solution</a></td>
+                </tr>  
+                <tr>
+                    <td>12</td>
+                    <td>Calculate simple interest = (P x R x T)/ 100</td>
+                    <td><a href="#card12">Solution</a></td>
+                </tr>  
+
+        </table>
+        <div class="practicals">
+           
+            
+           
+                <div class = "Solutions" id="card1">
+                <h4>Q1.Write a program to show that example of pre-increment ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int num1,num2;
+
+clrscr();
+printf("Enter the number : ");
+scanf("%d",&num1);
+
+num2 = ++num1;
+
+printf("\n Value of num1 = %d ",num1);
+printf("\n Value of num2 = %d ",num2);
+delay(3000);
+}
+</p>
+                <img src="Programs/operators/output/operator1.PNG" alt="">
+            </div>
+            <div class = "Solutions"  id="card2">
+                <h4>Q2.Write a program to show that example of post-increment ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int num1,num2;
+
+clrscr();
+printf("Enter the number : ");
+scanf("%d",&num1);
+
+num2 = num1++;
+
+printf("\n Value of num1 = %d ",num1);
+printf("\n Value of num2 = %d ",num2);
+delay(3000);
+}
+</p>
+                <img src="Programs/operators/output/operator2.PNG" alt="">
+            </div>
+            <div class = "Solutions"  id="card3">
+                <h4>Q3.Write a program to show that example of pre-decrement ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int num1,num2;
+
+clrscr();
+printf("Enter the number : ");
+scanf("%d",&num1);
+
+num2 = --num1;
+
+printf("\n Value of num1 = %d ",num1);
+printf("\n Value of num2 = %d ",num2);
+delay(3000);
+}
+</p>
+                <img src="Programs/operators/output/operator3.PNG" alt="">
+            </div>
+            <div class = "Solutions" id="card4">
+                <h4>Q4.Write a program to show that example of post-decrement ?
+</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int num1,num2;
+
+clrscr();
+printf("Enter the number : ");
+scanf("%d",&num1);
+
+num2 = num1--;
+
+printf("\n Value of num1 = %d ",num1);
+printf("\n Value of num2 = %d ",num2);
+delay(3000);
+}
+</p>
+                <img src="Programs/operators/output/operator4.PNG" alt="">
+            </div>
+            <div class = "Solutions"  id="card5">
+                <h4>Q5.Write a program to enter 2 numbers from user add the number and show the answer , again take 2 number from user subtract the number display the answer ,again take 2 number from user multiply the number display the answer and ,again take 2 number from the user divide the number display the answer ,again take 2 number find the remainder and display the answer ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+float num1,num2; // for all except remainder
+int num3,num4,i=1; // for remiander
+clrscr();
+for(i;i&lt;=5;i++){
+if(i&lt;=4){
+printf("Enter num1 : ");
+scanf("%f",&num1);
+printf("Enter num2 : ");
+scanf("%f",&num2);
+}
+if(i==5){
+
+printf("To find remainder\n");
+printf("Enter num3 : ");
+scanf("%d",&num3);
+printf("Enter num4 : ");
+scanf("%d",&num4);
+
+}
+i==1?printf("Value after additon of num1 and num2 : %f\n ",num1+num2):
+i==2?printf("Value after subtraction of num1 and num2 : %f \n",num1-num2):
+i==3?printf("Value after multiplication of num1 and num2 : %f \n",num1*num2):
+i==4?printf("Value after division of num1 and num2 : %f \n",num1/num2):
+i==5?printf("Remainder of num3 and num4 : %d \n",num3%num4):printf("");
+
+printf("\n");
+}
+
+delay(3000);
+}
+
+</p>
+                <img src="Programs/operators/output/operator5.PNG" alt="">
+            </div>
+            <div  class = "Solutions" id="card6">
+                <h4>Write a program to enter a number from the user ,the length of the number is depend on the user ,programmer should print the last digit of number ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+long int num1;
+clrscr();
+printf("Enter a number : ");
+scanf("%ld",&num1);
+printf("The last digit of the number is : %ld ", num1%10 );
+delay(3000);
+}
+
+</p>
+                <img src="Programs/operators/output/operator6.PNG" alt="blink could not be shown in image format">
+            </div>
+            <div  class = "Solutions" id="card7">
+                <h4>Q7.Enter a decimal number from the user (float) and print the right hand side of the decimal point ?
+</h4>
+                <p></p>
+                <img src="" alt="">
+            </div>
+            <div class = "Solutions" id="card8">
+                <h4>Q8.Enter a number from user and find out cube of numbers ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+int num,cube;
+clrscr();
+printf("Enter a number : ");
+scanf("%d",&num);
+
+cube = num*num*num;
+printf("\nCube of the number %d : %d",num,cube);
+
+delay(3000);
+}
+</p>
+                <img src="Programs/operators/output/operator8.PNG" alt="">
+            </div> 
+            <div class = "Solutions"  id="card9">
+                <h4>Q9.Enter float number from user and round of the number ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+float num,diff;
+int rd;
+clrscr();
+printf("Enter a number : ");
+scanf("%f",&num);
+rd = num;
+if(num-rd&gt;=0.5){
+
+	rd= rd+1;
+}
+ printf("The roundoff value is : %d ",rd);
+
+
+delay(3000);
+}
+</p>
+                <img src="Programs/operators/output/operator9.PNG" alt="">
+            </div>
+            <div  class = "Solutions" id="card10">
+                <h4>Q10.Enter a lower case character from user and print it into upper case ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+char ch;
+clrscr();
+printf("Enter a lower case character : ");
+scanf("%c",&ch);
+
+ch = ch - 32;
+printf("Upper case character : %c ",ch);
+
+delay(3000);
+}
+</p>
+                <img src="Programs/operators/output/operator10.PNG" alt="Output larger to be filled">
+            </div>
+             <div  class = "Solutions" id="card11">
+                <h4>Q11.Enter marks of students and calculate average of student’s marks ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+int i;
+int marks[5],sum=0; //let the students be 5
+clrscr();
+for(i=0;i&lt;5;i++)
+{
+printf("Enter the marks of student %d : ",i+1);
+scanf("%d",&marks[i]);
+
+sum = sum+marks[i];
+
+}
+printf("Average marks of 5 students : %d",sum/5);
+
+delay(3000);
+}
+</p>
+                <img src="Programs/operators/output/operator11.PNG" alt="Output larger to be filled">
+            </div>
+             <div  class = "Solutions" id="card12">
+                <h4>Q12.Calculate simple interest = (P x R x T)/ 100</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main(){
+
+long int p,r,t;
+
+clrscr();
+printf("Enter Principal amount : ");
+scanf("%ld",&p);
+printf("\nEnter rate of interest per year :  ");
+scanf("%ld",&r);
+printf("\nEnter Time in years : ");
+scanf("%ld",&t);
+
+printf("Final Evaluated simple interest will be : %ld ",p*r*t/100);
+
+delay(3000);
+}
+</p>
+                <img src="Programs/operators/output/operator12.PNG" alt="Output larger to be filled">
+            </div>
+
+        </div>
+        
+    </body>
+    
+</html>

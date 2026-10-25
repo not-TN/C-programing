@@ -1,0 +1,88 @@
+body{
+
+        margin : 0;
+margin-bottom:10px ;
+background-color:black;
+}
+header {
+    text-align: center  ;
+color : white;
+}
+
+.practicals{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;        
+    margin: 20 10;
+
+}
+.Solutions{
+    
+    min-height: 200px;
+    border : 2px solid crimson;
+    width: 90%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    background-color:#240F15;
+    box-sizing: border-box;
+    padding:15px;
+
+
+}
+th {
+
+    font-size: 40px;
+
+}
+
+th ,td{
+    
+    border: 2px solid crimson;
+    padding: 12px 20px;
+    
+}
+table{
+    
+    text-align: center;
+    background-color:#240F15;
+    width: 80%;
+    margin : 30px auto;
+    border-collapse: collapse;
+    color : white;
+
+}
+
+
+
+
+
+.Solutions h4{
+
+    width: 100%;
+    text-align: left;
+    color : White
+}
+
+.Solutions p {
+    width: 48%;
+    white-space: pre-wrap;
+    border: 1px solid crimson;
+    color: white;
+}
+
+.Solutions img{
+
+    width: 48%;
+    object-fit: contain;
+    border: 1px solid white;
+
+}
+
+html {
+
+scroll-behavior: smooth;
+
+}

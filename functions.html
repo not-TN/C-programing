@@ -1,0 +1,287 @@
+<html>
+    <head>
+<link rel="stylesheet" href="ip_op.css">
+    </head>
+    <body>
+        <header>
+            <h1> Functions </h1>
+            <h2> C Programming Solutions</h2>
+        </header>
+        
+        <table >
+            <tr><th colspan="3">  INDEX  </th></tr>
+            <tr>
+                <td>Sr No.</td>
+                <td>Progarm</td>
+                <td>Solutions</td>
+            </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Write a program to enter 2 number from the users add them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user add them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user add them and display the answer ?</td>
+                    <td><a href="#card1">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Write a program to enter 10 number from the user add the number and display the answer ?</td>
+                    <td><a href="#card2">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Write a program to return an array from function ?</td>
+                    <td><a href="#card3">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Making following program using local and global variable ?
+Factorial , Reverse , Palindrome , Prime numbers, Armstrong , Fibonacci</td>
+                    <td><a href="#card4">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Swap numbers using Call by address ?</td>
+                    <td><a href="#card5">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Swap numbers using Call by function ?</td>
+                    <td><a href="#card6" onclick="">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Make function for find out power of number, enter the number and power from user ?</td>
+                    <td><a href="#card7">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Make function for find out Cube a user entered number ?</td>
+                    <td><a href="#card8">Solution</a></td>
+                </tr>
+                  
+
+        </table>
+        <div class="practicals">
+           
+            
+           
+                <div class = "Solutions" id="card1">
+                <h4>Q1.Write a program to enter 2 number from the users add them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user add them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user add them and display the answer ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void add(int *ptr1, int *ptr2) {
+
+
+int ans;
+	printf("For Addition\n");
+    printf("Enter num1: ");
+    scanf("%d", ptr1);
+    printf("Enter num2: ");
+    scanf("%d", ptr2);
+    ans = *ptr1 + *ptr2;
+    printf("Sum = %d\n\n", ans);
+}
+
+void sub(int *ptr1, int *ptr2) {
+    int ans;
+	printf("For Subtraction\n");
+    printf("Enter num1: ");
+    scanf("%d", ptr1);
+    printf("Enter num2: ");
+    scanf("%d", ptr2);
+    ans = *ptr1 - *ptr2;
+    printf("Difference = %d\n\n", ans);
+}
+
+void mul(int *ptr1, int *ptr2) {
+    int ans;
+		printf("For Multiplication\n");
+    printf("Enter num1: ");
+    scanf("%d", ptr1);
+    printf("Enter num2: ");
+    scanf("%d", ptr2);
+    ans = (*ptr1) * (*ptr2);
+    printf("Product = %d\n\n", ans);
+}
+
+void divi(int *ptr1, int *ptr2) {
+    int ans;
+		printf("For Division\n");
+    printf("Enter num1: ");
+    scanf("%d", ptr1);
+    printf("Enter num2: ");
+    scanf("%d", ptr2);
+    if(*ptr2 != 0) {
+        ans = (*ptr1) / (*ptr2);
+        printf("Quotient = %d\n\n", ans);
+    } else {
+        printf("Error! Division by zero.\n\n");
+    }
+}
+
+void main() {
+    int num1, num2;
+    clrscr();
+    
+    add(&num1, &num2);  
+    sub(&num1, &num2);  
+    
+    mul(&num1, &num2);  
+    
+    divi(&num1, &num2); 
+    
+    delay(5000);
+}</p>
+                <img src="Programs/functions/outputs/fn1.PNG" alt="">
+            </div>
+            <div class = "Solutions"  id="card2">
+                <h4>Q2.Write a program to enter 10 number from the user add the number and display the answer ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void add10(int *ptr1) {
+    int i, sum = 0;
+    printf("Enter 10 numbers:\n");
+    for(i = 1; i <= 10; i++) {
+        printf("Enter number %d: ", i);
+        scanf("%d", ptr1);
+        sum += *ptr1;
+    }
+    printf("\nTotal Sum of 10 numbers = %d\n", sum);
+}
+
+void main() {
+    int num1;
+    clrscr();
+    add10(&num1);
+    delay(3000);
+}</p>
+                <img src="Programs/functions/outputs/fn2.PNG" alt="">
+            </div>
+            <div class = "Solutions"  id="card3">
+                <h4>Q3.Write a program to return an array from function ?</h4>
+                <p></p>
+                <img src="" alt="Under deveoplment">
+            </div>
+            <div class = "Solutions" id="card4">
+                <h4>Q4.Making following program using local and global variable ?
+Factorial , Reverse , Palindrome , Prime numbers, Armstrong , Fibonacci</h4>
+                <p></p>
+                <img src="" alt="Under deveoplment">
+            </div>
+            <div class = "Solutions"  id="card5">
+                <h4>Q5.Swap numbers using Call by address ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include <conio.h>
+#include <dos.h>
+
+void swap(int *ptr1, int *ptr2) {
+    int temp;
+    printf("Enter num1 for swapping: ");
+    scanf("%d", ptr1);
+    printf("Enter num2 for swapping: ");
+    scanf("%d", ptr2);
+
+    printf("\nBefore Swapping: num1 = %d, num2 = %d\n", *ptr1, *ptr2);
+    temp = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = temp;
+    printf("After Swapping: num1 = %d, num2 = %d\n", *ptr1, *ptr2);
+}
+
+void main() {
+    int num1, num2;
+    clrscr();
+    swap(&num1, &num2);
+    delay(3000);
+}</p>
+                <img src="Programs/functions/outputs/fn5.PNG" alt="">
+            </div>
+            <div  class = "Solutions" id="card6">
+                <h4>Q6.Swap numbers using Call by function ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &gt;dos.h&lt;
+
+void swap(int num1, int num2) {
+    int temp;
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+	printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+}
+
+void main() {
+    int num1, num2;
+    clrscr();
+    printf("Enter num1: ");
+    scanf("%d", &num1);
+    printf("Enter num2: ");
+    scanf("%d", &num2);
+
+    printf("\nBefore swapping: num1 = %d, num2 = %d\n", num1, num2);
+    swap(num1, num2);
+    
+
+    delay(3000);
+}</p>
+                <img src="Programs/functions/outputs/fn6.PNG" alt="">
+            </div>
+            <div  class = "Solutions" id="card7">
+                <h4>Q7.Make function for find out power of number, enter the number and power from user ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void Power(int *ptr1, int *ptr2) {
+    long int result = 1;
+    int i;
+    printf("Enter base number: ");
+    scanf("%d", ptr1);
+    printf("Enter exponent : ");
+    scanf("%d", ptr2);
+
+    for(i = 1; i <= *ptr2; i++) {
+        result = result * (*ptr1);
+    }
+    printf("%d raised to power %d = %ld\n", *ptr1, *ptr2, result);
+}
+
+void main() {
+    int num1, num2;
+    clrscr();
+    Power(&num1, &num2);
+    delay(3000);
+}</p>
+                <img src="Programs/functions/outputs/fn7.PNG" alt="">
+            </div>
+            <div class = "Solutions" id="card8">
+                <h4>Q8.Make function for find out Cube a user entered number ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void Cube(int *ptr1) {
+    int c;
+    printf("Enter a number (num1): ");
+    scanf("%d", ptr1);
+
+    cube = (*ptr1) * (*ptr1) * (*ptr1);
+    printf("Cube of %d = %d\n", *ptr1, c);
+}
+
+void main() {
+    int num1;
+    clrscr();
+    Cube(&num1);
+    delay(3000);
+}</p>
+                <img src="Programs/functions/outputs/fn8.PNG" alt="">
+            </div> 
+            
+        </div>
+        
+    </body>
+    
+</html>
