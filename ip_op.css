@@ -2,11 +2,17 @@ body{
 
         margin : 0;
 margin-bottom:10px ;
-background-color:black;
+background-color:beige;
 }
 header {
+    display:flex;
+    justify-content: space-between;
+    background-color: darkslategrey ;
     text-align: center  ;
 color : white;
+position : sticky;
+z-index : 100;
+top : 0;
 }
 
 .practicals{
@@ -19,14 +25,14 @@ color : white;
 
 }
 .Solutions{
-    
+
     min-height: 200px;
-    border : 2px solid crimson;
+    border : 2px solid darkslategrey;
     width: 90%;
     display: flex;
     flex-wrap:wrap;
     justify-content: space-between;
-    background-color:#240F15;
+    background-color:white;
     box-sizing: border-box;
     padding:15px;
 
@@ -40,18 +46,18 @@ th {
 
 th ,td{
     
-    border: 2px solid crimson;
+    border: 2px solid darkslategrey;
     padding: 12px 20px;
     
 }
 table{
     
     text-align: center;
-    background-color:#240F15;
+    background-color:beige;
     width: 80%;
     margin : 30px auto;
     border-collapse: collapse;
-    color : white;
+    color : black;
 
 }
 
@@ -63,21 +69,21 @@ table{
 
     width: 100%;
     text-align: left;
-    color : White
+    color :black;
 }
 
 .Solutions p {
     width: 48%;
     white-space: pre-wrap;
-    border: 1px solid crimson;
-    color: white;
+    border: 1px solid darkslategrey;
+    color: black;
 }
 
 .Solutions img{
 
     width: 48%;
     object-fit: contain;
-    border: 1px solid white;
+  
 
 }
 

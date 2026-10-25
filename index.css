@@ -1,111 +1,82 @@
-body{
-
-    
+body {
+    padding : 0;
     margin : 0;
-        padding : 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    background-color:#240F15;
-    color : white;
+    background-color : beige; 
+    color : black;
 }
+
+.Main {
+
+display: grid;
+grid-template-columns: repeat(3,1fr);
+align-items: center ;
+gap : 25px;
+padding : 30px;
+
+
+}
+
+.card {
+    box-sizing: border-box;
+    border  : 2px solid darkslategrey;
+    align-items: center;
+    display: flex;
+    flex-direction:column;
+    height:  170px;
+        border-radius: 6px;
+        text-align: center;
+        padding-bottom: 22px;
+}   
+.card a {
+margin-top: auto;
+width : 80%;
+
+}
+
+.card button {
+
+    border : none;
+    background-color :seagreen;
+    color : white ;
+    padding : 12px;
+    width : 90%;
+}
+
 
 header {
-    height: 75;
-    text-align: center;
-  margin: 0;
-        position : sticky;
-  
-        top : 0;
-        z-index: 100;
- 
+
+    position : sticky;
+    top : 0;
+    z-index :100; 
+    height :auto;
+    background-color : darkslategrey;
+    display : flex;
+    justify-content: space-between;
+       color : white;
+    padding: 5px 10px; 
 }
 
-#hero {
+#hero
+ {
     
-    text-align: center;
-
-    margin : 0 25;
-}
-#hero p {
-    font-size: 25;
-    max-width: 700px;
-    margin: 0 auto;
-    
-    text-wrap: pretty;
-
-}
-
-
-
-.main {
-    margin-left: 55 px;
-    display: grid;
-    gap : 25px;
-    grid-template-columns: repeat(3,1fr);
-   padding : 20px;
-    justify-items: center;
-    
-}   
-.main #card {
-    
-    height : 170px;
-    width :400px;
-    display: flex;
-    flex-direction: column;
+    display : flex;
+    flex-direction : column;
     align-items: center;
-    border : 2px solid crimson;   
+ }
 
-}
-#card h2 {
+ #hero h2 {
 
-    font-size: 22px;
+    font-size: 35;
 
-}
-footer {
-  margin-top: auto;
-    text-align: center;
-    padding-bottom:10px ;
-    color : crimson;
-}
+ }
+ #hero p {
+    font-size: 25px;
+    width: 1000px;
+    margin : 0 auto;
+    text-wrap : pretty ;
+ }
 
-footer hr{
-
-border: none;
-    background-color: crimson;
-    height: 2px;
-    width: 90%;
-
-}
-
-
-#card button {
-    margin-top:auto;
-    margin-bottom: 10px; 
-    width : 90%;
-    height: 20%;
-
-
-}
-
-button {
-    border: none;
-    background-color: darkred;
-    color: white;
-    font-size: 15;
-
-}
-
-#card h2 {
-
-    color : crimson;
-    font-family: 'Anton',sans-serif;
-
-}
-#hero h3{
-
-    font-size: 75;
-
-    
-
+ body > h2 {
+    font-size : 30px;
+    text-align :center;
  }
