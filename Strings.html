@@ -44,7 +44,7 @@
                 <tr>
                     <td>6</td>
                     <td></td>
-                    <td><a href="#card6" onclick="">Solution</a></td>
+                    <td><a href="#card6">Solution</a></td>
                 </tr>
                 <tr>
                     <td>7</td>
@@ -92,53 +92,638 @@
            
                 <div class = "Solutions" id="card1">
                 <h4></h4>
-                <p></p>
-                <img src="Programs/input and output/outputs/ip1.PNG" alt="">
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char str[20];
+    int i;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        if(str[i]&gt;='a' && str[i]&lt;='z')
+        {
+            str[i]=str[i]-32;
+        }
+    }
+
+    printf("Uppercase: %s", str);
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S1.PNG" alt="">
             </div>
             <div class = "Solutions"  id="card2">
                 <h4></h4>
-                <p></p>
-                <img src="Programs/input and output/outputs/ip2.PNG" alt="">
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char str[20];
+    int i;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        if(str[i]&gt;='A' && str[i]&lt;='Z')
+        {
+            str[i]=str[i]+32;
+        }
+    }
+
+    printf("Lowercase: %s", str);
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S2.PNG" alt="">
             </div>
             <div class = "Solutions"  id="card3">
                 <h4></h4>
-                <p></p>
-                <img src="Programs/input and output/outputs/ip3.PNG" alt="">
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char str[20];
+    int i;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        if(str[i]&gt;='A' && str[i]&lt;='Z')
+        {
+            str[i]=str[i]+32;
+        }
+    }
+
+    if(str[0]&gt;='a' && str[0]&lt;='z')
+    {
+        str[0]=str[0]-32;
+    }
+
+    printf("Sentence case: %s", str);
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S3.PNG" alt="">
             </div>
             <div class = "Solutions" id="card4">
                 <h4></h4>
-                <p></p>
-                <img src="Programs/input and output/outputs/ip4.PNG" alt="">
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char str[20];
+    int i;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        if(str[i]&gt;='A' && str[i]&lt;='Z')
+        {
+            str[i]=str[i]+32;
+        }
+    }
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        if(i==0 || str[i-1]==' ')
+        {
+            if(str[i]&gt;='a' && str[i]&lt;='z')
+            {
+                str[i]=str[i]-32;
+            }
+        }
+    }
+
+    printf("Title case: %s", str);
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S4.PNG" alt="">
             </div>
             <div class = "Solutions"  id="card5">
                 <h4></h4>
-                <p></p>
-                <img src="Programs/input and output/outputs/ip5.PNG" alt="">
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char str[20];
+    int i;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        if(str[i]&gt;='A' && str[i]&lt;='Z')
+        {
+            str[i]=str[i]+32;
+        }
+        else if(str[i]&gt;='a' && str[i]&lt;='z')
+        {
+            str[i]=str[i]-32;
+        }
+    }
+
+    printf("Toggle case: %s", str);
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S5.PNG" alt="">
             </div>
             <div  class = "Solutions" id="card6">
                 <h4></h4>
-                <p></p>
-                <img src="" alt="blink could not be shown in image format">
+                <p> #include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char str[20];
+    int i, count=0;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        count++;
+    }
+
+    printf("Length: %d", count);
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S6.PNG" alt="blink could not be shown in image format">
             </div>
             <div  class = "Solutions" id="card7">
                 <h4></h4>
-                <p></p>
-                <img src="Programs/input and output/outputs/ip8.PNG" alt="">
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char a[20], b[20];
+    int i=0;
+    clrscr();
+
+    printf("Enter first string: ");
+    gets(a);
+
+    printf("Enter second string: ");
+    gets(b);
+
+    while(a[i]!='\0' && b[i]!='\0')
+    {
+        if(a[i]!=b[i])
+        {
+            break;
+        }
+        i++;
+    }
+
+    if(a[i]==b[i])
+    {
+        printf("Both strings are equal");
+    }
+    else
+    {
+        printf("Strings are not equal");
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S7.PNG" alt="">
             </div>
             <div class = "Solutions" id="card8">
                 <h4></h4>
-                <p></p>
-                <img src="Programs/input and output/outputs/ip12.PNG" alt="">
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char a[40], b[20];
+    int i=0, j=0;
+    clrscr();
+
+    printf("Enter first string: ");
+    gets(a);
+
+    printf("Enter second string: ");
+    gets(b);
+
+    while(a[i]!='\0')
+    {
+        i++;
+    }
+
+    while(b[j]!='\0')
+    {
+        a[i]=b[j];
+        i++;
+        j++;
+    }
+
+    a[i]='\0';
+
+    printf("Concatenated: %s", a);
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S8.PNG" alt="">
             </div> 
             <div class = "Solutions"  id="card9">
                 <h4></h4>
-                <p></p>
-                <img src="Programs/input and output/outputs/ip13.PNG" alt="">
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char a[20], b[20];
+    int i;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(a);
+
+    for(i=0; a[i]!='\0'; i++)
+    {
+        b[i]=a[i];
+    }
+
+    b[i]='\0';
+
+    printf("Copied string: %s", b);
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S9.PNG" alt="">
             </div>
             <div  class = "Solutions" id="card10">
                 <h4></h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char str[20];
+    int i, n, count=0;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    printf("Enter index: ");
+    scanf("%d", &n);
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        count++;
+    }
+
+    if(n&gt;=0 && n&lt;count)
+    {
+        printf("Character: %c", str[n]);
+    }
+    else
+    {
+        printf("Out of bound");
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S10.PNG" alt="Output larger to be filled">
+            </div>
+             <div  class = "Solutions" id="card11">
+                <h4></h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char str[20];
+    int i;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        printf("%c\n", str[i]);
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S11.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card12">
+                <h4></h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char a[20], b[20];
+    int i, j=0, count=0;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(a);
+
+    for(i=0; a[i]!='\0'; i++)
+    {
+        count++;
+    }
+
+    for(i=count-1; i&gt;=0; i--)
+    {
+        b[j]=a[i];
+        j++;
+    }
+
+    b[j]='\0';
+
+    printf("Reverse: %s", b);
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S12.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card13">
+                <h4></h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char a[20], b[20];
+    int i=0, count=0;
+    clrscr();
+
+    printf("Enter first string: ");
+    gets(a);
+
+    printf("Enter second string: ");
+    gets(b);
+
+    while(a[i]!='\0' || b[i]!='\0')
+    {
+        if(a[i]!=b[i])
+        {
+            printf("\nDifference at index %d", i);
+            count++;
+        }
+        i++;
+    }
+
+    if(count==0)
+    {
+        printf("No difference");
+    }
+    else
+    {
+        printf("\nTotal differences: %d", count);
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S13.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card14">
+                <h4></h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char str[20], ch;
+    int i, found=0;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        if(str[i]==ch)
+        {
+            found=1;
+            break;
+        }
+    }
+
+    if(found==1)
+    {
+        printf("Character exists");
+    }
+    else
+    {
+        printf("Character does not exist");
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S14.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card15">
+                <h4></h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char str[20], ch;
+    int i, pos=0;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        if(str[i]==ch)
+        {
+            pos=i;
+            break;
+        }
+    }
+
+    if(pos==0)
+    {
+        printf("Character not found");
+    }
+    else
+    {
+        printf("Index: %d", pos);
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S15.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card16">
+                <h4></h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char str[20];
+    int i, count=0;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        if(str[i]=='a' || str[i]=='e' ||
+           str[i]=='i' || str[i]=='o' ||
+           str[i]=='u' || str[i]=='A' ||
+           str[i]=='E' || str[i]=='I' ||
+           str[i]=='O' || str[i]=='U')
+        {
+            count++;
+        }
+    }
+
+    printf("Total vowels: %d", count);
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S16.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card17">
+                <h4></h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char str[20];
+    int i, n, count=0;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    printf("Enter bound number: ");
+    scanf("%d", &n);
+
+    for(i=0; str[i]!='\0'; i++)
+    {
+        count++;
+    }
+
+    if(n&gt;=0 && n&lt;count)
+    {
+        printf("Character: %c", str[n]);
+    }
+    else
+    {
+        printf("Out of bound");
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S17.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card18">
+                <h4></h4>
                 <p></p>
-                <img src="" alt="Output larger to be filled">
+                <img src="Programs/Strings/outputs/S18.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card19">
+                <h4></h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char name[20], className[20];
+    int roll, marks[5];
+    int i, total=0;
+    float percentage;
+    clrscr();
+
+    printf("Enter roll number: ");
+    scanf("%d", &roll);
+
+    /* Clear the newline before gets() */
+    getchar();
+
+    printf("Enter name: ");
+    gets(name);
+
+    printf("Enter class: ");
+    gets(className);
+
+    for(i=0; i&lt;5; i++)
+    {
+        printf("Enter marks of subject %d: ", i+1);
+        scanf("%d", &marks[i]);
+        total=total+marks[i];
+    }
+
+    percentage=total/5.0;
+
+    printf("\nRoll number: %d", roll);
+    printf("\nName: %s", name);
+    printf("\nClass: %s", className);
+
+    for(i=0; i&lt;5; i++)
+    {
+        printf("\nSubject %d: %d", i+1, marks[i]);
+    }
+
+    printf("\nTotal: %d", total);
+    printf("\nPercentage: %.2f", percentage);
+
+    delay(2000);
+}</p>
+                <img src="Programs/Strings/outputs/S19.PNG" alt="Output larger to be filled">
             </div>
 
         </div>
