@@ -718,7 +718,39 @@ void main()
 
             <div  class = "Solutions" id="card18">
                 <h4>String palindrome example (using reverse) ?</h4>
-                <p></p>
+                <p>
+                    #include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+                    #include&lt;string.h&gt;
+
+void main()
+{
+    char str[20], rev[20];
+    int i,j;
+    clrscr();
+
+    printf("Enter a string: ");
+    gets(str);
+
+    j=0;
+
+    for(i=strlen(str)-1;i>=0;i--)
+    {
+        rev[j]=str[i];
+        j++;
+    }
+
+    rev[j]='\0';
+
+    if(strcmp(str,rev)==0)
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
+
+    delay(2000);
+}
+                </p>
                 <img src="Programs/Strings/outputs/S18.PNG" alt="Output larger to be filled">
             </div>
 
