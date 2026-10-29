@@ -167,9 +167,9 @@ void main()
     printf("Enter a number: ");
     scanf("%ld",&n);
 
-    if(n<0)
+    if(n<0) {
         printf("Enter a non-negative number");
-    else
+     } else
     {
         do
         {
@@ -183,8 +183,8 @@ void main()
     }
 
     delay(2000);
-}</p>
-                <img src="Programs/loops/l1.PNG" alt="">
+}   
+    </p>            <img src="Programs/loops/l1.PNG" alt="">
             </div>
             <div class = "Solutions"  id="card2">
                 <h4>Enter a number from the user and check that the number is divisible by any prime number or not ?
@@ -202,13 +202,13 @@ void main()
     printf("Enter a number: ");
     scanf("%d",&n);
 
-    for(i=2;i<=n;i++)
+    for(i=2;i&lt;=n;i++)
     {
         if(n%i==0)
         {
             prime=1;
 
-            for(j=2;j<i;j++)
+            for(j=2;j&lt;i;j++)
             {
                 if(i%j==0)
                 {
@@ -226,11 +226,11 @@ void main()
         }
     }
 
-    if(found==0)
+    if(found==0){
         printf("Not divisible by any prime number");
-
+}
     delay(2000);
-}</p>
+} </p>
                 <img src="Programs/loops/l2.PNG" alt="">
             </div>
             <div class = "Solutions"  id="card3">
@@ -250,7 +250,7 @@ void main()
     if(n<=1)
         flag=1;
 
-    for(i=2;i<n;i++)
+    for(i=2;i&lt;n;i++)
     {
         if(n%i==0)
         {
@@ -543,7 +543,7 @@ void main()
         count++;
     }
 
-    for(i=0, j=count-1; i<j; i++, j--)
+    for(i=0, j=count-1; i&lt;j; i++, j--)
     {
         if(num[i]!=num[j])
         {
@@ -580,7 +580,7 @@ void main()
     printf("Enter power: ");
     scanf("%d",&power);
 
-    if(power<0)
+    if(power&lt;0)
         printf("Enter a non-negative power");
     else
     {
@@ -659,7 +659,7 @@ void main()
     printf("Enter a number: ");
     scanf("%d", &n);
 
-    if(n<0)
+    if(n&lt;0)
     {
         printf("Factorial not defined");
     }
@@ -720,7 +720,7 @@ void main()
 
     printf("Enter password: ");
 
-    while(i<20)
+    while(i&lt;20)
     {
         ch=getch();
 
@@ -825,7 +825,7 @@ void main()
 
     for(j=0;num[j]!='\0';j++);
 
-    for(i=0,j=j-1;i<j;i++,j--)
+    for(i=0,j=j-1;i&lt;j;i++,j--)
     {
         if(num[i]!=num[j])
         {
