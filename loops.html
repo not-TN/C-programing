@@ -1,0 +1,814 @@
+<html>
+    <head>
+<link rel="stylesheet" href="ip_op.css">
+    </head>
+    <body>
+        <header>
+            <h1> 1-D Array </h1>
+           <a  href="index.html"> <h2> C Programming Solutions</h2></a>
+        </header>
+        <p>click C programming to go to home page.</p>
+        <table >
+            <tr><th colspan="3">  INDEX  </th></tr>
+            <tr>
+                <td>Sr No.</td>
+                <td>Program</td>
+                <td>Solutions</td>
+            </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>y</td>
+                    <td><a href="#card1">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td><a href="#card2">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td><a href="#card3">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td><a href="#card4">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Enter an array from user and print the number which is even ?</td>
+                    <td><a href="#card5">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Enter an array from user and print the number which is positive ?</td>
+                    <td><a href="#card6" onclick="">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Enter an array from user and square all the values of array ?</td>
+                    <td><a href="#card7">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Enter 5 values of array from user and print odd number of array ?</td>
+                    <td><a href="#card8">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Enter 5 values of array from user and add all values ?</td>
+                    <td><a href="#card9">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Enter 5 values of array from user, enter a value from user and search this value in array, if value is found then print “found” or not then print “not found”?</td>
+                    <td><a href="#card10">Solution</a></td>
+                </tr>  
+
+                 <tr>
+                    <td>11</td>
+                    <td>Enter five values of array and sort in ascending order ?</td>
+                    <td><a href="#card11">Solution</a></td>
+                </tr>  
+
+                <tr>
+                    <td>12</td>
+                    <td>Find maximum values of array ?</td>
+                    <td><a href="#card12">Solution</a></td>
+                </tr>  
+
+                <tr>
+                    <td>13</td>
+                    <td>Find minimum values of array ?</td>
+                    <td><a href="#card13">Solution</a></td>
+                </tr>  
+
+        </table>
+        <div class="practicals">
+           
+            
+           
+                <div class = "Solutions" id="card1">
+                <h4>Enter a number from the user and find out the binary of that number ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+
+void main()
+{
+    long n, binary=0, place=1;
+    int rem;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%ld",&n);
+
+    if(n<0)
+        printf("Enter a non-negative number");
+    else
+    {
+        do
+        {
+            rem=n%2;
+            binary=binary+rem*place;
+            n=n/2;
+            place=place*10;
+        }while(n!=0);
+
+        printf("Binary = %ld",binary);
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l1.PNG" alt="">
+            </div>
+            <div class = "Solutions"  id="card2">
+                <h4>
+
+Enter a number from the user and check that the number is divisible by any prime number or not ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    int n, i, j, prime, found=0;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    for(i=2;i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            prime=1;
+
+            for(j=2;j<i;j++)
+            {
+                if(i%j==0)
+                {
+                    prime=0;
+                    break;
+                }
+            }
+
+            if(prime==1)
+            {
+                found=1;
+                printf("Divisible by prime number %d",i);
+                break;
+            }
+        }
+    }
+
+    if(found==0)
+        printf("Not divisible by any prime number");
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l2.PNG" alt="">
+            </div>
+            <div class = "Solutions"  id="card3">
+                <h4>Enter a number from the user and check it is a prime number or not ?</h4>
+                <p>#include &lt;stdio.h&gt; 
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    int n,i,flag=0;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    if(n<=1)
+        flag=1;
+
+    for(i=2;i<n;i++)
+    {
+        if(n%i==0)
+        {
+            flag=1;
+            break;
+        }
+    }
+
+    if(flag==0)
+        printf("Prime number");
+    else
+        printf("Not a prime number");
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l3.PNG" alt="">
+            </div>
+            <div class = "Solutions" id="card4">
+                <h4>Enter an array from user and copy it into another array in reverse order ?</h4>
+                <p>#include  &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    char num[20];
+    int i;
+    clrscr();
+
+    printf("Enter a number: ");
+    gets(num);
+
+    for(i=0;num[i]!='\0';i++)
+        printf("%c\n",num[i]);
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l4.PNG" alt="">
+            </div>
+            <div class = "Solutions"  id="card5">
+                <h4>Enter an array from user and print the number which is even ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+
+void main()
+{
+    long i;
+    clrscr();
+
+    for(i=1;i<=100000;i++)
+    {
+        printf("Your Name\n");
+    }
+
+    delay(2000);
+}</p>
+                <img src="" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card6">
+                <h4>Enter an array from user and print the number which is positive ?</h4>
+                <p>#include &lt;stdio.h&lt;
+#include &lt;conio.h&lt;
+#include &lt;dos.h&lt;
+
+void main()
+{
+    long i;
+    clrscr();
+
+    for(i=1;i<=100000;i++)
+    {
+        printf("%ld\n",i);
+    }
+
+    delay(2000);
+}</p>
+                <img src="" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card7">
+                <h4>Enter an array from user and square all the values of array ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    int n,i;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    for(i=1;i<=n;i++)
+    {
+        printf("%d ",i);
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l7.PNG" alt="">
+            </div>
+            <div class = "Solutions" id="card8">
+                <h4>Enter 5 values of array from user and print odd number of array ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    int n,i;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    for(i=1;i<=100;i++)
+    {
+        printf("%d\n",n);
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l8.PNG" alt="">
+            </div> 
+            <div class = "Solutions"  id="card9">
+                <h4>Enter 5 values of array from user and add all values ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    int i;
+    clrscr();
+
+    for(i=1;i<=100;i=i+2)
+    {
+        printf("%d ",i);
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l9.PNG" alt="">
+            </div>
+            <div  class = "Solutions" id="card10">
+                <h4>Enter 5 values of array from user, enter a value from user and search this value in array, if value is found then print “found” or not then print “not found”?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    int i;
+    clrscr();
+
+    for(i=1;i<=20;i++)
+    {
+        printf("4*%d=%d\n",i,4*i);
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l10.PNG" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card11">
+                <h4>Enter five values of array and sort in ascending order ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    char num[20];
+    int i, count=0;
+    clrscr();
+
+    printf("Enter a number: ");
+    gets(num);
+
+    for(i=0; num[i]!='\0'; i++)
+    {
+        count++;
+    }
+
+    printf("Reverse number: ");
+
+    for(i=count-1; i>=0; i--)
+    {
+        printf("%c", num[i]);
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l11.PNG" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card12">
+                <h4>
+                Find maximum values of array ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+
+void main()
+{
+    char choice;
+    int a,b;
+    clrscr();
+
+    while(1)
+    {
+        printf("\n1. Addition");
+        printf("\n2. Subtraction");
+        printf("\n3. Multiplication");
+        printf("\n4. Division");
+        printf("\n5. Modulo");
+        printf("\nQ. Quit");
+
+        printf("\nEnter choice: ");
+        scanf(" %c",&choice);
+
+        if(choice=='Q' || choice=='q')
+            break;
+
+        if(choice>='1' && choice<='5')
+        {
+            printf("Enter two numbers: ");
+            scanf("%d%d",&a,&b);
+        }
+
+        switch(choice)
+        {
+            case '1':
+                printf("Answer = %d\n",a+b);
+                break;
+
+            case '2':
+                printf("Answer = %d\n",a-b);
+                break;
+
+            case '3':
+                printf("Answer = %d\n",a*b);
+                break;
+
+            case '4':
+                if(b!=0)
+                    printf("Answer = %.2f\n",(float)a/b);
+                else
+                    printf("Cannot divide by zero\n");
+                break;
+
+            case '5':
+                if(b!=0)
+                    printf("Answer = %d\n",a%b);
+                else
+                    printf("Cannot divide by zero\n");
+                break;
+
+            default:
+                printf("Invalid choice\n");
+        }
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l12.PNG" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card13">
+                <h4>Find minimum values of array ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    char num[20];
+    int i, j, count=0, flag=0;
+    clrscr();
+
+    printf("Enter a number: ");
+    gets(num);
+
+    for(i=0; num[i]!='\0'; i++)
+    {
+        count++;
+    }
+
+    for(i=0, j=count-1; i<j; i++, j--)
+    {
+        if(num[i]!=num[j])
+        {
+            flag=1;
+            break;
+        }
+    }
+
+    if(flag==0)
+        printf("Palindrome number");
+    else
+        printf("Not a palindrome number");
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l13.PNG" alt="Output larger to be filled">
+            </div>
+                  <div  class = "Solutions" id="card14">
+                <h4>Enter the string from user and enter a character , it is exist or not ?</h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    int base,power,i;
+    long result=1;
+    clrscr();
+
+    printf("Enter base: ");
+    scanf("%d",&base);
+
+    printf("Enter power: ");
+    scanf("%d",&power);
+
+    if(power<0)
+        printf("Enter a non-negative power");
+    else
+    {
+        for(i=1;i<=power;i++)
+        {
+            result=result*base;
+        }
+
+        printf("Result = %ld",result);
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l14.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card15">
+                <h4>
+
+Enter the string from user and enter a character if it is exist then print the bound number ?</h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char num[20];
+    clrscr();
+
+    printf("Enter a number: ");
+    gets(num);
+
+    printf("First digit = %c", num[0]);
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l15.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card16">
+                <h4>Enter the string from user and count all vowels ?</h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    int n, i, sum=0;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    for(i=0;i<=n;i++)
+        sum=sum+i;
+
+    printf("Total = %d",sum);
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l16.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card17">
+                <h4>Enter the string from user and enter bound number and print character on that bound ?</h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    int n, i;
+    long int fact=1;
+
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if(n<0)
+    {
+        printf("Factorial not defined");
+    }
+    else
+    {
+        for(i=1; i<=n; i++)
+        {
+            fact=fact*i;
+        }
+
+        printf("Factorial = %ld", fact);
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l17.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card18">
+                <h4>String palindrome example (using reverse) ?</h4>
+                <p>
+                    #include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+                    void main()
+{
+    int a,b,i;
+    clrscr();
+
+    printf("Enter first number: ");
+    scanf("%d",&a);
+
+    printf("Enter second number: ");
+    scanf("%d",&b);
+
+    for(i=a;i<=b;i++)
+    {
+        printf("%d ",i);
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l18.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card19">
+                <h4>
+Enter the data from user the data consist of roll no. ,name ,class , marks of 5 subjects ?</h4>
+                <p>#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+
+void main()
+{
+    char pass[21], ch;
+    int i=0;
+    clrscr();
+
+    printf("Enter password: ");
+
+    while(i<20)
+    {
+        ch=getch();
+
+        if(ch==13)
+            break;
+
+        pass[i]=ch;
+        printf("*");
+        i++;
+    }
+
+    pass[i]='\0';
+
+    printf("\nPassword entered");
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l19.PNG" alt="Output larger to be filled">
+            </div>
+
+            <div  class = "Solutions" id="card20">
+                <h4>Enter the year from user and check its leap year or not ?</h4>
+                <p>
+                    #include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+                    void main()
+{
+    int i;
+    clrscr();
+
+    for(i=1;i<=100;i++)
+    {
+        printf("%d\n",i);
+        delay(1000);
+    }
+}</p>
+                <img src="" alt="blinking cant be shown.">
+            </div>
+            <div  class = "Solutions" id="card21">
+                <h4>Enter current date of DOB of user and find out difference ?	</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+    int a=0,b=1,c;
+    clrscr();
+
+    printf("%d %d ",a,b);
+
+    c=a+b;
+
+    while(c<=100)
+    {
+        printf("%d ",c);
+        a=b;
+        b=c;
+        c=a+b;
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l21.PNG" alt="Output larger to be filled">
+            </div>
+            <div  class = "Solutions" id="card22">
+                <h4>Write a program to calculate area and perimeter of rectangle ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+    char ch;
+    clrscr();
+
+    printf("Enter a character: ");
+    scanf(" %c",&ch);
+
+    if((ch>='A' && ch<='Z') || (ch>='a' && ch<='z'))
+        printf("Alphabet");
+    else
+        printf("Not an alphabet");
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l22.PNG" alt="Output larger to be filled">
+            </div>
+            
+           <div  class = "Solutions" id="card23">
+                <h4>Write a program to calculate area and perimeter of rectangle ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+    char num[20];
+    int i,j,flag=0;
+    clrscr();
+
+    printf("Enter a number: ");
+    gets(num);
+
+    for(j=0;num[j]!='\0';j++);
+
+    for(i=0,j=j-1;i<j;i++,j--)
+    {
+        if(num[i]!=num[j])
+        {
+            flag=1;
+            break;
+        }
+    }
+
+    if(flag==0)
+        printf("Palindrome");
+    else
+        printf("Not palindrome");
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l23.PNG" alt="Output larger to be filled">
+            </div>
+                       <div  class = "Solutions" id="card24">
+                <h4>Write a program to calculate area and perimeter of rectangle ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+    int n, a, b, c, sum;
+    clrscr();
+
+    printf("Enter a 3-digit number: ");
+    scanf("%d", &n);
+
+    a = n % 10;
+    b = (n / 10) % 10;
+    c = n / 100;
+
+    sum = a*a*a + b*b*b + c*c*c;
+
+    if(n>=100 && n<=999 && sum==n)
+        printf("Armstrong number");
+    else
+        printf("Not Armstrong number");
+
+    delay(2000);
+}</p>
+                <img src="Programs/loops/l24.PNG" alt="Output larger to be filled">
+            </div>
+
+        </div>
+        
+    </body>
+    
+</html>
