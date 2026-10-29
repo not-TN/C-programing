@@ -92,3 +92,37 @@ html {
 scroll-behavior: smooth;
 
 }
+
+@media (max-width : 768px) {
+    header {
+
+        flex-direction: column;
+        align-items: center;
+        padding : 11px;
+    }
+
+    table{
+     width : 95%;  
+    }
+    th,td {
+    
+    padding : 8px;
+    font-size: 14px;
+    }
+    .Solutions {
+        
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+    }
+    .Solutions p{
+        width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: anywhere ;
+
+    }
+    .Solutions img{
+        
+        width: 100%;
+    }   
+}

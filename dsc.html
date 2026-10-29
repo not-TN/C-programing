@@ -1,7 +1,8 @@
 <html>
     <head>
 <link rel="stylesheet" href="ip_op.css">
-    </head>
+<meta name="viewport" content="width=device-width , initial-scale=1.0">   
+</head>
     <body>
         <header>
             <h1> Decision Control Structure </h1>
@@ -610,8 +611,54 @@ void main() {
             </div>
             <div  class = "Solutions" id="card17">
                 <h4>	Enter two digit number from user and print it in word (like 50 will be five zero) ?</h4>
-                <p></p>
-                <img src="" alt="Output larger to be filled">
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    int n, a, b, i;
+    clrscr();
+
+    printf("Enter a two digit number: ");
+    scanf("%d", &n);
+
+    if(n>=10 && n<=99)
+    {
+        a=n/10;
+        b=n%10;
+
+        for(i=1;i<=2;i++)
+        {
+            if(i==1)
+                n=a;
+            else
+                n=b;
+
+            switch(n)
+            {
+                case 0: printf("Zero "); break;
+                case 1: printf("One "); break;
+                case 2: printf("Two "); break;
+                case 3: printf("Three "); break;
+                case 4: printf("Four "); break;
+                case 5: printf("Five "); break;
+                case 6: printf("Six "); break;
+                case 7: printf("Seven "); break;
+                case 8: printf("Eight "); break;
+                case 9: printf("Nine "); break;
+            }
+        }
+    }
+    else
+    {
+        printf("Enter a valid two digit number");
+    }
+
+    delay(2000);
+}
+</p>
+                <img src="Programs/decision control structure/output/dsc18.PNG" alt="Output larger to be filled">
             </div>
             <div  class = "Solutions" id="card18">
                 <h4>Enter a character from user and it is in upper case, lower case, special characters or numbers ?</h4>
@@ -640,18 +687,144 @@ void main() {
             </div>
             <div  class = "Solutions" id="card19">
                 <h4>Enter the year from user and check its leap year or not ?</h4>
-                <p></p>
-                <img src="" alt="Output larger to be filled">
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+                    void main()
+{
+    int year;
+    clrscr();
+
+    printf("Enter year: ");
+    scanf("%d",&year);
+
+    if(year<=0)
+        printf("Invalid year");
+    else if(year%400==0 || (year%4==0 && year%100!=0))
+        printf("Leap year");
+    else
+        printf("Not a leap year");
+
+    delay(2000);
+}
+                </p>
+                <img src="Programs/decision control structure/output/dsc20.PNG" alt="Output larger to be filled">
             </div>
             <div  class = "Solutions" id="card20">
                 <h4>Enter the year from user and check its leap year or not ?</h4>
-                <p></p>
+                <p>
+                    #include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+                </p>
                 <img src="" alt="Output larger to be filled">
             </div>
             <div  class = "Solutions" id="card21">
                 <h4>Enter current date of DOB of user and find out difference ?	</h4>
-                <p></p>
-                <img src="" alt="Output larger to be filled">
+                <p>
+                    #include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+    int d1,m1,y1,d2,m2,y2;
+    int day,month,year,days,valid=1;
+    clrscr();
+
+    printf("Enter DOB (DD MM YYYY): ");
+    scanf("%d%d%d",&d1,&m1,&y1);
+
+    printf("Enter current date (DD MM YYYY): ");
+    scanf("%d%d%d",&d2,&m2,&y2);
+
+    if(y1<1 || y2<1 || m1<1 || m1>12 ||
+       m2<1 || m2>12)
+        valid=0;
+
+    if(valid==1)
+    {
+        if(m1==4 || m1==6 || m1==9 || m1==11)
+            days=30;
+        else if(m1==2)
+        {
+            if(y1%400==0 || (y1%4==0 && y1%100!=0))
+                days=29;
+            else
+                days=28;
+        }
+        else
+            days=31;
+
+        if(d1<1 || d1>days)
+            valid=0;
+
+        if(m2==4 || m2==6 || m2==9 || m2==11)
+            days=30;
+        else if(m2==2)
+        {
+            if(y2%400==0 || (y2%4==0 && y2%100!=0))
+                days=29;
+            else
+                days=28;
+        }
+        else
+            days=31;
+
+        if(d2<1 || d2>days)
+            valid=0;
+    }
+
+    if(valid==0)
+        printf("Invalid date");
+    else if(y2&lt;y1 || (y2==y1 && m2&lt;m1) ||
+            (y2==y1 && m2==m1 && d2&lt;&lt;d1))
+        printf("Current date is before DOB");
+    else
+    {
+        if(d2&lt;d1)
+        {
+            m2--;
+
+            if(m2==0)
+            {
+                m2=12;
+                y2--;
+            }
+
+            if(m2==4 || m2==6 || m2==9 || m2==11)
+                days=30;
+            else if(m2==2)
+            {
+                if(y2%400==0 || (y2%4==0 && y2%100!=0))
+                    days=29;
+                else
+                    days=28;
+            }
+            else
+                days=31;
+
+            d2=d2+days;
+        }
+
+        if(m2&lt;m1)
+        {
+            m2=m2+12;
+            y2--;
+        }
+
+        day=d2-d1;
+        month=m2-m1;
+        year=y2-y1;
+
+        printf("Years = %d\n",year);
+        printf("Months = %d\n",month);
+        printf("Days = %d",day);
+    }
+
+    delay(2000);
+}
+                </p>
+                <img src="Programs/decision control structure/output/dsc21.PNG" alt="Output larger to be filled">
             </div>
             <div  class = "Solutions" id="card22">
                 <h4>Write a program to calculate area and perimeter of rectangle ?</h4>
