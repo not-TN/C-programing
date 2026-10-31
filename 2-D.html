@@ -1,0 +1,289 @@
+
+<html>
+    <head>
+<link rel="stylesheet" href="ip_op.css">
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1> Basic Input Output </h1>
+             <a  href="index.html"> <h2> C Programming Solutions</h2></a>
+        </header>
+        <p>click C programming to go to home page.</p>
+        <table >
+            <tr><th colspan="3">  INDEX  </th></tr>
+            <tr>
+                <td>Sr No.</td>
+                <td>Program</td>
+                <td>Solutions</td>
+            </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Create structure of employee which there is emp.ID, name, designation of 50 employees from user, print details in tabular form ?</td>
+                    <td><a href="#progarm1">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print only name of the employee ?</td>
+                    <td><a href="#progarm2">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print name character with emp.ID in tabular form ?</td>
+                    <td><a href="#progarm3">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Enter student details like roll name, fee, DOB and print all the detail by ascending order of roll number ?</td>
+                    <td><a href="#progarm4">Solution</a></td>
+                </tr>
+        </table>
+        <div class="practicals">
+           
+            
+           
+                <div class = "Solutions" id="progarm1">
+                <h4>Create structure of employee which there is emp.ID, name, designation of 50 employees from user, print details in tabular form ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    int m1[2][2],i,j;
+    clrscr();
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            printf("Enter number at row:%d column:%d: ",i+1,j+1);
+            scanf("%d",&m1[i][j]);
+        }
+    }
+
+    printf("\nMatrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            printf("%d ",m1[i][j]);
+        }
+        printf("\n");
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/2d/D1.PNG" alt="output too large">
+            </div>
+            <div class = "Solutions"  id="progarm2">
+                <h4>Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print only name of the employee ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+
+void main()
+{
+    int m1[2][2],i,j;
+    clrscr();
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            printf("Enter number at row:%d column%d: ",i+1,j+1);
+            scanf("%d",&m[i][j]);
+        }
+    }
+
+    printf("\nOriginal Matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            printf("%d\t",m1[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\nTranspose Matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            printf("%d\t",m1[j][i]);
+        }
+        printf("\n");
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/2d/D2.PNG" alt="too large">
+            </div>
+            <div class = "Solutions"  id="progarm3">
+                <h4>Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print name character with emp.ID in tabular form ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+
+void main()
+{
+    int m1[2][2],m2[2][2],m3[2][2],i,j;
+    clrscr();
+
+    printf("Enter First Matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            printf("Enter number at row:%d column%d: ",i+1,j+1);
+            scanf("%d",&m1[i][j]);
+        }
+    }
+
+    printf("\nEnter Second Matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            printf("Enter number at row:%d column%d: ",i+1,j+1);
+            scanf("%d",&m2[i][j]);
+        }
+    }
+
+    printf("\nAddition Matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            m3[i][j]=m1[i][j]+m2[i][j];
+            printf("%d\t",m3[i][j]);
+        }
+        printf("\n");
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/2d/D3.PNG" alt="output large">
+            </div>
+            <div class = "Solutions" id="progarm4">
+                <h4>Enter student details like roll name, fee, DOB and print all the detail by ascending order of roll number ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    int m1[2][2],m2[2][2],m3[2][2],i,j;
+    clrscr();
+
+    printf("Enter First Matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            printf("Enter number at row:%d column%d: ",i+1,j+1);
+            scanf("%d",&m1[i][j]);
+        }
+    }
+
+    printf("\nEnter Second Matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            printf("Enter number at row:%d column%d: ",i+1,j+1);
+            scanf("%d",&m2[i][j]);
+        }
+    }
+
+    printf("\nSubtracted Matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            m3[i][j]=m1[i][j]-m2[i][j];
+            printf("%d\t",m3[i][j]);
+        }
+        printf("\n");
+    }
+
+    delay(2000);
+}
+
+</p>
+                <img src="Programs/2d/D4.PNG" alt="output large">
+            </div>
+            <div class = "Solutions" id="progarm5">
+                <h4>Enter student details like roll name, fee, DOB and print all the detail by ascending order of roll number ?</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    int m1[2][2],m2[2][2],m3[2][2],i,j,k;
+    clrscr();
+
+    printf("Enter First Matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            printf("Enter number at row:%d column:%d: ",i+1,j+1);
+            scanf("%d",&m1[i][j]);
+        }
+    }
+
+    printf("\nEnter Second Matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            printf("Enter number at row:%d column:%d: ",i+1,j+1);
+            scanf("%d",&m2[i][j]);
+        }
+    }
+
+    printf("\nMultiplication Matrix:\n");
+
+    for(i=0;i&lt;2;i++)
+    {
+        for(j=0;j&lt;2;j++)
+        {
+            m3[i][j]=0;
+
+            for(k=0;k&lt;2;k++)
+            {
+                m3[i][j]=m3[i][j]+m1[i][k]*m2[k][j];
+            }
+
+            printf("%d\t",m3[i][j]);
+        }
+        printf("\n");
+    }
+
+    delay(2000);
+}</p>
+                <img src="Programs/2d/D5.PNG" alt="output large">
+            </div>
+
+        </div>
+        
+    </body>
+    
+</html>
