@@ -1,0 +1,126 @@
+<html>
+    <head>
+<link rel="stylesheet" href="ip_op.css">
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1> Recursion </h1>
+             <a  href="index.html"> <h2> C Programming Solutions</h2></a>
+        </header>
+        <p>click C programming to go to home page.</p>
+        <table >
+            <tr><th colspan="3">  INDEX  </th></tr>
+            <tr>
+                <td>Sr No.</td>
+                <td>Program</td>
+                <td>Solutions</td>
+            </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Q1. Write a program of recursion and display the output.</td>
+                    <td><a href="#progarm1">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Q2. Write a program of recursion with global variable and display the output.</td>
+                    <td><a href="#progarm2">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Q3. Write a program of recursion with local variable and display the output.</td>
+                    <td><a href="#progarm3">Solution</a></td>
+                </tr>
+                
+            </table>
+        <div class="practicals">
+           
+            
+           
+                <div class = "Solutions" id="progarm1">
+                <h4>Q1. Write a program of recursion and display the output.</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void prt(int num)
+{
+    if(num<=5)
+    {
+        printf("%d ",num);
+   	prt(num+1);
+    }
+}
+
+void main()
+{
+    clrscr();
+
+    prt(1);
+
+    delay(2000);
+}</p>
+                <img src="" alt="too large">
+            </div>
+            <div class = "Solutions"  id="progarm2">
+                <h4>Q2. Write a program of recursion with global variable and display the output.</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+int num=1;
+
+void prt()
+{
+    if(num<=5)
+    {
+        printf("%d ",num);
+        num++;
+        prt();
+    }
+}
+
+void main()
+{
+    clrscr();
+
+prt();
+
+    delay(2000);
+}</p>
+                <img src="" alt="output large">
+            </div>
+            <div class = "Solutions" id="progarm3">
+                <h4>Q3. Write a program of recursion with local variable and display the output.</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+
+
+void prt(int num)
+{
+    if(num<=5)
+    {
+        printf("%d ",num);
+  prt(num+1);
+    }
+}
+
+void main()
+{
+    int num=1;
+    clrscr();
+
+prt(num);
+
+    delay(2000);
+}</p>
+                <img src="" alt="output large">
+            
+        </div>
+        
+    </body>
+    
+</html>

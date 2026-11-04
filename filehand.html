@@ -1,0 +1,687 @@
+<html>
+    <head>
+<link rel="stylesheet" href="ip_op.css">
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1> File Handling </h1>
+             <a  href="index.html"> <h2> C Programming Solutions</h2></a>
+        </header>
+        <p>click C programming to go to home page.</p>
+        <table >
+            <tr><th colspan="3">  INDEX  </th></tr>
+            <tr>
+                <td>Sr No.</td>
+                <td>Program</td>
+                <td>Solutions</td>
+            </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Q1. Enter the file name and data from the user, convert the data into capital letters, and store it in the file.</td>
+                    <td><a href="#progarm1">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Q2. Enter the file name from the user and keep entering data into the file until the user wants to stop.</td>
+                    <td><a href="#progarm2">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Q3. Enter the file name and data from the user, create a file, and rename the file using a new file name entered by the user.</td>
+                    <td><a href="#progarm3">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Q4. Enter the file name and data from the user, create a file, and copy its contents into another file.</td>
+                    <td><a href="#progarm4">Solution</a></td>
+                </tr>
+                <td>5</td>
+                    <td>Q5. Enter the names of three files and the data for the first two files from the user, create the files, and concatenate the contents of the first two files into the third file.</td>
+                    <td><a href="#progarm5">Solution</a></td>
+                </tr>
+                <td>6</td>
+                    <td>Q6. Enter the file name and data from the user, create a file, and count the total number of characters in the file.</td>
+                    <td><a href="#progarm6">Solution</a></td>
+                </tr>
+                <td>7</td>
+                    <td>Q7. Enter the file name and data from the user, create a file, and count the total number of words in the file.</td>
+                    <td><a href="#progarm7">Solution</a></td>
+                </tr>
+            </table>
+        <div class="practicals">
+           
+            
+           
+                <div class = "Solutions" id="progarm1">
+                <h4>Q1. Enter the file name and data from the user, convert the data into capital letters, and store it in the file.</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    char file[25],data[100];
+    int i;
+    FILE *p1;
+
+    clrscr();
+
+    printf("Enter file name : ");
+
+    repeat:
+    gets(file);
+
+    for(i=0;file[i]!='\0';i++)
+    {
+        if(file[i]=='\\' || file[i]=='/' ||
+           file[i]=='?' || file[i]=='*' ||
+           file[i]==':' || file[i]=='>' ||
+           file[i]=='<' || file[i]=='"' ||
+           file[i]=='|')
+        {
+            printf("Invalid file name.\n");
+            printf("Enter file name again : ");
+            goto repeat;
+        }
+    }
+
+    printf("Enter your name : ");
+    gets(data);
+
+    for(i=0;data[i]!='\0';i++)
+    {
+        if(data[i]>='a' && data[i]<='z')
+        {
+            data[i]=data[i]-32;
+        }
+    }
+
+    p1=fopen(file,"w");
+
+    if(p1==NULL)
+    {
+        printf("File not created");
+    }
+    else
+    {
+        fprintf(p1,"Name : %s",data);
+        fclose(p1);
+
+        printf("Name in capital : %s",data);
+        printf("\nFile created ");
+    }
+
+    delay(2000);
+}</p>
+                <img src="" alt="output too large">
+            </div>
+            <div class = "Solutions"  id="progarm2">
+                <h4>Q2. Enter the file name from the user and keep entering data into the file until the user wants to stop.</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    char file[25],data[100];
+    int i;
+    FILE *p1;
+
+    clrscr();
+
+    printf("Enter file name : ");
+
+    repeat:
+    gets(file);
+
+    for(i=0;file[i]!='\0';i++)
+    {
+        if(file[i]=='\\' || file[i]=='/' ||
+           file[i]=='?' || file[i]=='*' ||
+           file[i]==':' || file[i]=='>' ||
+           file[i]=='<' || file[i]=='"' ||
+           file[i]=='|')
+        {
+            printf("Invalid file name.\n");
+            printf("Enter file name again : ");
+            goto repeat;
+        }
+    }
+
+    p1=fopen(file,"w");
+
+    if(p1==NULL)
+    {
+        printf("File not created");
+    }
+    else
+    {
+        printf("Enter data (@ to stop) :\n");
+
+        while(1)
+        {
+            gets(data);
+
+            if(data[0]=='@' && data[1]=='\0')
+            {
+                break;
+            }
+
+            fputs(data,p1);
+            fputc('\n',p1);
+        }
+
+        fclose(p1);
+        printf("Data saved successfully");
+    }
+
+    delay(2000);
+}</p>
+                <img src="" alt="too large">
+            </div>
+            <div class = "Solutions"  id="progarm3">
+                <h4>Q3. Enter the file name and data from the user, create a file, and copy its contents into another file with a new name.</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    char file[25],file2[25],data[100];
+    int i;
+    FILE *p1,*p2;
+
+    clrscr();
+
+    printf("Enter old file name : ");
+
+    repeat:
+    gets(file);
+
+    for(i=0;file[i]!='\0';i++)
+    {
+        if(file[i]=='\\' || file[i]=='/' ||
+           file[i]=='?' || file[i]=='*' ||
+           file[i]==':' || file[i]=='>' ||
+           file[i]=='<' || file[i]=='"' ||
+           file[i]=='|')
+        {
+            printf("Invalid file name.\n");
+            printf("Enter file name again : ");
+            goto repeat;
+        }
+    }
+
+    printf("Enter data : ");
+    gets(data);
+
+    p1=fopen(file,"w");
+
+    if(p1==NULL)
+    {
+        printf("File not created");
+    }
+    else
+    {
+        fprintf(p1,"%s",data);
+        fclose(p1);
+
+        printf("Enter new file name : ");
+
+        again:
+        gets(file2);
+
+        for(i=0;file2[i]!='\0';i++)
+        {
+            if(file2[i]=='\\' || file2[i]=='/' ||
+               file2[i]=='?' || file2[i]=='*' ||
+               file2[i]==':' || file2[i]=='>' ||
+               file2[i]=='<' || file2[i]=='"' ||
+               file2[i]=='|')
+            {
+                printf("Invalid file name.\n");
+                printf("Enter file name again : ");
+                goto again;
+            }
+        }
+
+        p1=fopen(file,"r");
+
+        if(p1==NULL)
+        {
+            printf("File not opened");
+        }
+        else
+        {
+            p2=fopen(file2,"w");
+
+            if(p2==NULL)
+            {
+                printf("New file not created");
+            }
+            else
+            {
+                while(fgets(data,100,p1)!=NULL)
+                {
+                    fputs(data,p2);
+                }
+
+                fclose(p2);
+               
+            }
+
+            fclose(p1);
+        }
+    }
+
+    delay(2000);
+}</p>
+                <img src="" alt="output large">
+            </div>
+            <div class = "Solutions" id="progarm4">
+                <h4>Q4. Enter the file name and data from the user, create a file, and copy its contents into another file.</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+
+
+void main()
+{
+    char file[25],file2[25],data[100];
+    int i;
+    FILE *p1,*p2;
+
+    clrscr();
+
+    printf("Enter first file name : ");
+
+    repeat:
+    gets(file);
+
+    for(i=0;file[i]!='\0';i++)
+    {
+        if(file[i]=='\\' || file[i]=='/' ||
+           file[i]=='?' || file[i]=='*' ||
+           file[i]==':' || file[i]=='>' ||
+           file[i]=='<' || file[i]=='"' ||
+           file[i]=='|')
+        {
+            printf("Invalid file name.\n");
+            printf("Enter file name again : ");
+            goto repeat;
+        }
+    }
+
+    printf("Enter second file name : ");
+
+    again:
+    gets(file2);
+
+    for(i=0;file2[i]!='\0';i++)
+    {
+        if(file2[i]=='\\' || file2[i]=='/' ||
+           file2[i]=='?' || file2[i]=='*' ||
+           file2[i]==':' || file2[i]=='>' ||
+           file2[i]=='<' || file2[i]=='"' ||
+           file2[i]=='|')
+        {
+            printf("Invalid file name.\n");
+            printf("Enter file name again : ");
+            goto again;
+        }
+    }
+
+    printf("Enter data : ");
+    gets(data);
+
+    p1=fopen(file,"w");
+
+    if(p1==NULL)
+    {
+        printf("File not created");
+    }
+    else
+    {
+        fprintf(p1,"%s",data);
+        fclose(p1);
+
+        p1=fopen(file,"r");
+
+        if(p1==NULL)
+        {
+            printf("File not opened");
+        }
+        else
+        {
+            p2=fopen(file2,"w");
+
+            if(p2==NULL)
+            {
+                printf("Second file not created");
+            }
+            else
+            {
+                while(fgets(data,100,p1)!=NULL)
+                {
+                    fputs(data,p2);
+                }
+
+                fclose(p2);
+                printf("File copied ");
+            }
+
+            fclose(p1);
+        }
+    }
+
+    delay(2000);
+}</p>
+                <img src="" alt="output large">
+            </div>
+                     <div class = "Solutions" id="progarm5">
+                <h4>Q5. Enter the names of three files and the data for the first two files from the user, create the files, and concatenate the contents of the first two files into the third file.</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+
+
+void main()
+{
+    char file[25],file2[25],file3[25],data[100];
+    int i;
+    FILE *p1,*p2,*p3;
+
+    clrscr();
+
+    printf("Enter first file name : ");
+
+    repeat:
+    gets(file);
+
+    for(i=0;file[i]!='\0';i++)
+    {
+        if(file[i]=='\\' || file[i]=='/' ||
+           file[i]=='?' || file[i]=='*' ||
+           file[i]==':' || file[i]=='>' ||
+           file[i]=='<' || file[i]=='"' ||
+           file[i]=='|')
+        {
+            printf("Invalid file name.\n");
+            printf("Enter file name again : ");
+            goto repeat;
+        }
+    }
+
+    printf("Enter second file name : ");
+
+    again:
+    gets(file2);
+
+    for(i=0;file2[i]!='\0';i++)
+    {
+        if(file2[i]=='\\' || file2[i]=='/' ||
+           file2[i]=='?' || file2[i]=='*' ||
+           file2[i]==':' || file2[i]=='>' ||
+           file2[i]=='<' || file2[i]=='"' ||
+           file2[i]=='|')
+        {
+            printf("Invalid file name.\n");
+            printf("Enter file name again : ");
+            goto again;
+        }
+    }
+
+    printf("Enter third file name : ");
+
+    retry:
+    gets(file3);
+
+    for(i=0;file3[i]!='\0';i++)
+    {
+        if(file3[i]=='\\' || file3[i]=='/' ||
+           file3[i]=='?' || file3[i]=='*' ||
+           file3[i]==':' || file3[i]=='>' ||
+           file3[i]=='<' || file3[i]=='"' ||
+           file3[i]=='|')
+        {
+            printf("Invalid file name.\n");
+            printf("Enter file name again : ");
+            goto retry;
+        }
+    }
+
+    p1=fopen(file,"w");
+
+    if(p1==NULL)
+    {
+        printf("First file not created");
+    }
+    else
+    {
+        printf("Enter first file data : ");
+        gets(data);
+
+        fprintf(p1,"%s",data);
+        fclose(p1);
+
+        p2=fopen(file2,"w");
+
+        if(p2==NULL)
+        {
+            printf("Second file not created");
+        }
+        else
+        {
+            printf("Enter second file data : ");
+            gets(data);
+
+            fprintf(p2,"%s",data);
+            fclose(p2);
+
+            p1=fopen(file,"r");
+            p2=fopen(file2,"r");
+
+            if(p1==NULL || p2==NULL)
+            {
+                printf("Files not opened");
+            }
+            else
+            {
+                p3=fopen(file3,"w");
+
+                if(p3==NULL)
+                {
+                    printf("Third file not created");
+                }
+                else
+                {
+                    while(fgets(data,100,p1)!=NULL)
+                    {
+                        fputs(data,p3);
+                    }
+
+                    while(fgets(data,100,p2)!=NULL)
+                    {
+                        fputs(data,p3);
+                    }
+
+                    fclose(p3);
+                    printf("Files concatenated y");
+                }
+            }
+
+            if(p1!=NULL)
+                fclose(p1);
+
+            if(p2!=NULL)
+                fclose(p2);
+        }
+    }
+
+    delay(2000);
+}</p>
+                <img src="" alt="output large">
+            </div>
+              <div class = "Solutions" id="progarm6">
+                <h4>Q6. Enter the file name and data from the user, create a file, and count the total number of characters in the file.</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+
+
+void main()
+{
+    char file[25],data[100];
+    int i,ch,count=0,word=0;
+    FILE *p1;
+
+    clrscr();
+
+    printf("Enter file name : ");
+
+    repeat:
+    gets(file);
+
+    for(i=0;file[i]!='\0';i++)
+    {
+        if(file[i]=='\\' || file[i]=='/' ||
+           file[i]=='?' || file[i]=='*' ||
+           file[i]==':' || file[i]=='>' ||
+           file[i]=='<' || file[i]=='"' ||
+           file[i]=='|')
+        {
+            printf("Invalid file name.\n");
+            printf("Enter file name again : ");
+            goto repeat;
+        }
+    }
+
+    printf("Enter data : ");
+    gets(data);
+
+    p1=fopen(file,"w");
+
+    if(p1==NULL)
+    {
+        printf("File not created");
+    }
+    else
+    {
+        fprintf(p1,"%s",data);
+        fclose(p1);
+
+        p1=fopen(file,"r");
+
+        if(p1==NULL)
+        {
+            printf("File not opened");
+        }
+        else
+        {
+            while((ch=fgetc(p1))!=-1)
+            {
+                if(ch==' ' || ch=='\n' || ch=='\t')
+                {
+                    word=0;
+                }
+                else if(word==0)
+                {
+                    count++;
+                    word=1;
+                }
+            }
+
+            printf("Total words = %d",count);
+            fclose(p1);
+        }
+    }
+
+    delay(2000);
+}</p>
+                <img src="" alt="output large">
+            </div>
+              <div class = "Solutions" id="progarm7">
+                <h4>Q7. Enter the file name and data from the user, create a file, and count the total number of words in the file.</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+
+
+#include<stdio.h>
+#include<conio.h>
+#include<dos.h>
+
+void main()
+{
+    char file[25],data[100];
+    int i,ch,count=0;
+    FILE *p1;
+
+    clrscr();
+
+    printf("Enter file name : ");
+
+    repeat:
+    gets(file);
+
+    for(i=0;file[i]!='\0';i++)
+    {
+        if(file[i]=='\\' || file[i]=='/' ||
+           file[i]=='?' || file[i]=='*' ||
+           file[i]==':' || file[i]=='>' ||
+           file[i]=='<' || file[i]=='"' ||
+           file[i]=='|')
+        {
+            printf("Invalid file name.\n");
+            printf("Enter file name again : ");
+            goto repeat;
+        }
+    }
+
+    printf("Enter data : ");
+    gets(data);
+
+    p1=fopen(file,"w");
+
+    if(p1==NULL)
+    {
+        printf("File not created");
+    }
+    else
+    {
+        fprintf(p1,"%s",data);
+        fclose(p1);
+
+        p1=fopen(file,"r");
+
+        if(p1==NULL)
+        {
+            printf("File not opened");
+        }
+        else
+        {
+            while((ch=fgetc(p1))!=-1)
+            {
+                count++;
+            }
+
+            printf("Total characters = %d",count);
+            fclose(p1);
+        }
+    }
+
+    delay(2000);
+}</p>
+                <img src="" alt="output large">
+            </div>
+        </div>
+        
+    </body>
+    
+</html>

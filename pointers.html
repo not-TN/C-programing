@@ -1,0 +1,105 @@
+<html>
+    <head>
+<link rel="stylesheet" href="ip_op.css">
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1> Pointers </h1>
+             <a  href="index.html"> <h2> C Programming Solutions</h2></a>
+        </header>
+        <p>click C programming to go to home page.</p>
+        <table >
+            <tr><th colspan="3">  INDEX  </th></tr>
+            <tr>
+                <td>Sr No.</td>
+                <td>Program</td>
+                <td>Solutions</td>
+            </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Q1. Write a C program to enter and print all elements of an array using a pointer.</td>
+                    <td><a href="#progarm1">Solution</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Q2. Write a program to swap two numbers using pointers.</td>
+                    <td><a href="#progarm2">Solution</a></td>
+                </tr>
+                
+                
+            </table>
+        <div class="practicals">
+           
+            
+           
+                <div class = "Solutions" id="progarm1">
+                <h4>Q1. Write a C program to enter and print all elements of an array using a pointer.</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main()
+{
+    int a[5],*p,i;
+    clrscr();
+
+    p=a;
+
+    for(i=0;i&lt;5;i++)
+    {
+        printf("Enter number at location %d: ",i+1);
+        scanf("%d",p+i);
+    }
+
+    printf("\nArray elements:\n");
+
+    for(i=0;i&lt;5;i++)
+    {
+        printf("%d ",*(p+i));
+    }
+
+    delay(2000);
+}</p>
+                <img src="" alt="too large">
+            </div>
+            <div class = "Solutions"  id="progarm2">
+                <h4>Q2. Write a program to swap two numbers using pointers.</h4>
+                <p>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+    int a,b,temp;
+    int *p1,*p2;
+    clrscr();
+
+    printf("Enter first number: ");
+    scanf("%d",&a);
+
+    printf("Enter second number: ");
+    scanf("%d",&b);
+
+    p1=&a;
+    p2=&b;
+
+    temp=*p1;
+    *p1=*p2;
+    *p2=temp;
+
+    printf("\nAfter swapping:\n");
+    printf("First number = %d\n",a);
+    printf("Second number = %d",b);
+
+    delay(2000);
+}</p>
+                <img src="" alt="output large">
+            </div>
+           
+            
+        </div>
+        
+    </body>
+    
+</html>
